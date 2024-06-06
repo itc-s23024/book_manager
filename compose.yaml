@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mariadb:lts
+    ports:
+      - "3306:3306"
+    container_name: mariadb_host
+    environment:
+      MARIADB_ROOT_PASSWORD: foobarhogepiyo
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
