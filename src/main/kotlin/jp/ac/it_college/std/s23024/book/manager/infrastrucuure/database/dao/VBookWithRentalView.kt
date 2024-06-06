@@ -4,7 +4,7 @@ import org.jetbrains.exposed.dao.id.LongIdTable
 import org.jetbrains.exposed.sql.kotlin.datetime.date
 import org.jetbrains.exposed.sql.kotlin.datetime.datetime
 
-object VBookWithRental : LongIdTable("v_book_with_rental") {
+object VBookWithRentalView : LongIdTable("v_book_with_rental") {
     val title = varchar("title", 128)
     val author = varchar("author", 32)
     val releaseDate = date("release_date")
