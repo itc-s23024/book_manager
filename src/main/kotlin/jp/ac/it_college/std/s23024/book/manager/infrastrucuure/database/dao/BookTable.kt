@@ -6,5 +6,5 @@ import org.jetbrains.exposed.sql.kotlin.datetime.date
 object BookTable : LongIdTable("book") {
     val title = varchar("title", 128)
     val author = varchar("author", 32)
-    val releaseData = date("release_data")
+    val releaseData = date("release_date")
 }

@@ -9,8 +9,8 @@ class VBookWithRentalEntity(id: EntityID<Long>) : LongEntity(id) {
 
     var title by VBookWithRentalView.title
     var author by VBookWithRentalView.author
-    var rentalId by VBookWithRentalView.releaseDate
-    var useId by VBookWithRentalView.useid
+    var releaseDate by VBookWithRentalView.releaseDate
+    var userId by VBookWithRentalView.useid
     var rentalDateTime by VBookWithRentalView.rentalDateTime
     var returnDeadline by VBookWithRentalView.returnDeadline
 }
