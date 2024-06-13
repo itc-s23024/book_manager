@@ -34,6 +34,7 @@ class SecurityConfig(
     fun configure(http: HttpSecurity): SecurityFilterChain {
         http {
             authorizeRequests {
+                // 認可に関する設定(1)
                 authorize("/login", permitAll)
                 authorize("/admin/**", hasAuthority(RoleType.ADMIN.toString()))
                 authorize(anyRequest, authenticated)
