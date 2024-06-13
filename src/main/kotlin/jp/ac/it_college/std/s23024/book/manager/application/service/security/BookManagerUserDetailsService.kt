@@ -20,7 +20,7 @@ class BookManagerUserDetailsService(
         return BookManagerUserDetails(user)
     }
 
-    private data class BookManagerUserDetails(
+     data class BookManagerUserDetails(
         val id: Long,
         val email: String,
         val pass: String,

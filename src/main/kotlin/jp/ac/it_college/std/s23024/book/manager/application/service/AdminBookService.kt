@@ -2,8 +2,8 @@ package jp.ac.it_college.std.s23024.book.manager.application.service
 
 import jp.ac.it_college.std.s23024.book.manager.domain.model.Book
 import jp.ac.it_college.std.s23024.book.manager.domain.repository.BookRepository
-import jp.ac.it_college.std.s23024.book.manager.presentation.exception.BookIdAlreadyInUseException
-import jp.ac.it_college.std.s23024.book.manager.presentation.exception.BookNotFoundException
+import jp.ac.it_college.std.s23024.book.manager.domain.exception.BookIdAlreadyInUseException
+import jp.ac.it_college.std.s23024.book.manager.domain.exception.BookNotFoundException
 import kotlinx.datetime.LocalDate
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
