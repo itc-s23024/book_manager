@@ -4,6 +4,7 @@ import jp.ac.it_college.std.s23024.book.manager.domain.model.Rental
 import jp.ac.it_college.std.s23024.book.manager.domain.repository.RentalRepository
 import jp.ac.it_college.std.s23024.book.manager.infrastrucuure.database.dao.BookEntity
 import jp.ac.it_college.std.s23024.book.manager.infrastrucuure.database.dao.RentalEntity
+import jp.ac.it_college.std.s23024.book.manager.infrastrucuure.database.dao.RentalTable
 import jp.ac.it_college.std.s23024.book.manager.infrastrucuure.database.dao.UserEntity
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.springframework.stereotype.Repository
@@ -23,6 +24,14 @@ class RenatlRepositoryImpl : RentalRepository {
                 rentalDateTime = rental.rentalDateTime
                 returnDeadline = rental.returnDeadline
             }
+        }
+    }
+
+    override fun endRental(bookId: Long) {
+        transaction {
+            RentalEntity.find {
+                    RentalTable.book eq bookId
+            }.singleOrNull()?.delete()
         }
     }
 }
